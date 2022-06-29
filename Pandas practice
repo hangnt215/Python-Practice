@@ -1,0 +1,22 @@
+# Create a class accepting to read file.csv
+import pandas as pd 
+
+class filecsv:
+    def __init__(self, name):
+        self.name = name
+    def docfile(self):
+        df = pd.read_csv(self.name)
+        print(df.to_string())
+        print(df.info())
+
+# Inform that Y/N if wrong path computing
+while True:
+    try:
+        name = str(input("Mời nhập tên file: "))
+        doc = filecsv(name)
+        doc.docfile()
+        break
+    except FileNotFoundError:
+        n = str(input("Bạn đã sai đường dẫn. Bạn có muốn nhập lại hay không? (Y/N): "))
+        if (n == "N") or (n == "n"):
+            break
