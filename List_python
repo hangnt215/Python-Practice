@@ -1,0 +1,14 @@
+list = [2, 3, 6, 23, 5, 6, "4", "a"]
+
+# Print a list only whole number
+list_int = []
+for i in list:
+    if isinstance(i, int):
+        list_int.append(i)
+print(list_int)
+
+# Print a max number
+print(max(list_int))
+
+# Print a list ordered by asc 
+print(sorted(list_int))
